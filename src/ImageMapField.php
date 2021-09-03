@@ -71,6 +71,7 @@ class ImageMapField extends acf_field
      *
      * @return void
      */
+    // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public function input_admin_enqueue_scripts(): void
     {
         wp_enqueue_script("acf-{$this->name}", $this->asset('js/field.js'), [], null);
@@ -84,6 +85,7 @@ class ImageMapField extends acf_field
      *
      * @return void
      */
+    // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public function render_field(array $field)
     {
         $this->findShape($field['shape'])->renderShape($field);
@@ -97,6 +99,7 @@ class ImageMapField extends acf_field
      *
      * @return void
      */
+    // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public function render_field_settings(array $field)
     {
         // Image to use.
@@ -140,6 +143,7 @@ class ImageMapField extends acf_field
      *
      * @return mixed
      */
+    // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public function format_value($value, $post_id, $field)
     {
         return $this->findShape($field['shape'])->formatValue($value);

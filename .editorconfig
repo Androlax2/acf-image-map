@@ -5,7 +5,7 @@ charset = utf-8
 end_of_line = lf
 indent_size = 4
 indent_style = space
-insert_final_newline = true
+insert_final_newline = false
 max_line_length = 140
 tab_width = 4
 ij_continuation_indent_size = 8
@@ -16,9 +16,6 @@ ij_smart_tabs = false
 ij_visual_guides = none
 ij_wrap_on_typing = true
 
-[*.blade.php]
-ij_blade_keep_indents_on_empty_lines = true
-
 [*.css]
 ij_css_align_closing_brace_with_properties = false
 ij_css_blank_lines_around_nested_selector = 1
@@ -26,32 +23,54 @@ ij_css_blank_lines_between_blocks = 1
 ij_css_brace_placement = end_of_line
 ij_css_enforce_quotes_on_format = false
 ij_css_hex_color_long_format = false
-ij_css_hex_color_lower_case = true
+ij_css_hex_color_lower_case = false
 ij_css_hex_color_short_format = false
 ij_css_hex_color_upper_case = false
 ij_css_keep_blank_lines_in_code = 2
 ij_css_keep_indents_on_empty_lines = false
 ij_css_keep_single_line_blocks = false
-ij_css_properties_order = font, font-family, font-size, font-weight, font-style, font-variant, font-size-adjust, font-stretch, line-height, position, z-index, top, right, bottom, left, display, visibility, float, clear, overflow, overflow-x, overflow-y, clip, zoom, align-content, align-items, align-self, flex, flex-flow, flex-basis, flex-direction, flex-grow, flex-shrink, flex-wrap, justify-content, order, box-sizing, width, min-width, max-width, height, min-height, max-height, margin, margin-top, margin-right, margin-bottom, margin-left, padding, padding-top, padding-right, padding-bottom, padding-left, table-layout, empty-cells, caption-side, border-spacing, border-collapse, list-style, list-style-position, list-style-type, list-style-image, content, quotes, counter-reset, counter-increment, resize, cursor, user-select, nav-index, nav-up, nav-right, nav-down, nav-left, transition, transition-delay, transition-timing-function, transition-duration, transition-property, transform, transform-origin, animation, animation-name, animation-duration, animation-play-state, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, text-align, text-align-last, vertical-align, white-space, text-decoration, text-emphasis, text-emphasis-color, text-emphasis-style, text-emphasis-position, text-indent, text-justify, letter-spacing, word-spacing, text-outline, text-transform, text-wrap, text-overflow, text-overflow-ellipsis, text-overflow-mode, word-wrap, word-break, tab-size, hyphens, pointer-events, opacity, color, border, border-width, border-style, border-color, border-top, border-top-width, border-top-style, border-top-color, border-right, border-right-width, border-right-style, border-right-color, border-bottom, border-bottom-width, border-bottom-style, border-bottom-color, border-left, border-left-width, border-left-style, border-left-color, border-radius, border-top-left-radius, border-top-right-radius, border-bottom-right-radius, border-bottom-left-radius, border-image, border-image-source, border-image-slice, border-image-width, border-image-outset, border-image-repeat, outline, outline-width, outline-style, outline-color, outline-offset, background, background-color, background-image, background-repeat, background-attachment, background-position, background-position-x, background-position-y, background-clip, background-origin, background-size, box-decoration-break, box-shadow, text-shadow
+ij_css_properties_order = font,font-family,font-size,font-weight,font-style,font-variant,font-size-adjust,font-stretch,line-height,position,z-index,top,right,bottom,left,display,visibility,float,clear,overflow,overflow-x,overflow-y,clip,zoom,align-content,align-items,align-self,flex,flex-flow,flex-basis,flex-direction,flex-grow,flex-shrink,flex-wrap,justify-content,order,box-sizing,width,min-width,max-width,height,min-height,max-height,margin,margin-top,margin-right,margin-bottom,margin-left,padding,padding-top,padding-right,padding-bottom,padding-left,table-layout,empty-cells,caption-side,border-spacing,border-collapse,list-style,list-style-position,list-style-type,list-style-image,content,quotes,counter-reset,counter-increment,resize,cursor,user-select,nav-index,nav-up,nav-right,nav-down,nav-left,transition,transition-delay,transition-timing-function,transition-duration,transition-property,transform,transform-origin,animation,animation-name,animation-duration,animation-play-state,animation-timing-function,animation-delay,animation-iteration-count,animation-direction,text-align,text-align-last,vertical-align,white-space,text-decoration,text-emphasis,text-emphasis-color,text-emphasis-style,text-emphasis-position,text-indent,text-justify,letter-spacing,word-spacing,text-outline,text-transform,text-wrap,text-overflow,text-overflow-ellipsis,text-overflow-mode,word-wrap,word-break,tab-size,hyphens,pointer-events,opacity,color,border,border-width,border-style,border-color,border-top,border-top-width,border-top-style,border-top-color,border-right,border-right-width,border-right-style,border-right-color,border-bottom,border-bottom-width,border-bottom-style,border-bottom-color,border-left,border-left-width,border-left-style,border-left-color,border-radius,border-top-left-radius,border-top-right-radius,border-bottom-right-radius,border-bottom-left-radius,border-image,border-image-source,border-image-slice,border-image-width,border-image-outset,border-image-repeat,outline,outline-width,outline-style,outline-color,outline-offset,background,background-color,background-image,background-repeat,background-attachment,background-position,background-position-x,background-position-y,background-clip,background-origin,background-size,box-decoration-break,box-shadow,text-shadow
 ij_css_space_after_colon = true
 ij_css_space_before_opening_brace = true
 ij_css_use_double_quotes = true
 ij_css_value_alignment = do_not_align
 
+[*.sass]
+indent_size = 2
+ij_sass_align_closing_brace_with_properties = false
+ij_sass_blank_lines_around_nested_selector = 1
+ij_sass_blank_lines_between_blocks = 1
+ij_sass_brace_placement = 0
+ij_sass_enforce_quotes_on_format = false
+ij_sass_hex_color_long_format = false
+ij_sass_hex_color_lower_case = false
+ij_sass_hex_color_short_format = false
+ij_sass_hex_color_upper_case = false
+ij_sass_keep_blank_lines_in_code = 2
+ij_sass_keep_indents_on_empty_lines = false
+ij_sass_keep_single_line_blocks = false
+ij_sass_properties_order = font,font-family,font-size,font-weight,font-style,font-variant,font-size-adjust,font-stretch,line-height,position,z-index,top,right,bottom,left,display,visibility,float,clear,overflow,overflow-x,overflow-y,clip,zoom,align-content,align-items,align-self,flex,flex-flow,flex-basis,flex-direction,flex-grow,flex-shrink,flex-wrap,justify-content,order,box-sizing,width,min-width,max-width,height,min-height,max-height,margin,margin-top,margin-right,margin-bottom,margin-left,padding,padding-top,padding-right,padding-bottom,padding-left,table-layout,empty-cells,caption-side,border-spacing,border-collapse,list-style,list-style-position,list-style-type,list-style-image,content,quotes,counter-reset,counter-increment,resize,cursor,user-select,nav-index,nav-up,nav-right,nav-down,nav-left,transition,transition-delay,transition-timing-function,transition-duration,transition-property,transform,transform-origin,animation,animation-name,animation-duration,animation-play-state,animation-timing-function,animation-delay,animation-iteration-count,animation-direction,text-align,text-align-last,vertical-align,white-space,text-decoration,text-emphasis,text-emphasis-color,text-emphasis-style,text-emphasis-position,text-indent,text-justify,letter-spacing,word-spacing,text-outline,text-transform,text-wrap,text-overflow,text-overflow-ellipsis,text-overflow-mode,word-wrap,word-break,tab-size,hyphens,pointer-events,opacity,color,border,border-width,border-style,border-color,border-top,border-top-width,border-top-style,border-top-color,border-right,border-right-width,border-right-style,border-right-color,border-bottom,border-bottom-width,border-bottom-style,border-bottom-color,border-left,border-left-width,border-left-style,border-left-color,border-radius,border-top-left-radius,border-top-right-radius,border-bottom-right-radius,border-bottom-left-radius,border-image,border-image-source,border-image-slice,border-image-width,border-image-outset,border-image-repeat,outline,outline-width,outline-style,outline-color,outline-offset,background,background-color,background-image,background-repeat,background-attachment,background-position,background-position-x,background-position-y,background-clip,background-origin,background-size,box-decoration-break,box-shadow,text-shadow
+ij_sass_space_after_colon = true
+ij_sass_space_before_opening_brace = true
+ij_sass_use_double_quotes = true
+ij_sass_value_alignment = 0
+
 [*.scss]
+indent_size = 2
+indent_style = tab
 ij_scss_align_closing_brace_with_properties = false
 ij_scss_blank_lines_around_nested_selector = 1
 ij_scss_blank_lines_between_blocks = 0
 ij_scss_brace_placement = 0
 ij_scss_enforce_quotes_on_format = false
 ij_scss_hex_color_long_format = false
-ij_scss_hex_color_lower_case = true
-ij_scss_hex_color_short_format = false
-ij_scss_hex_color_upper_case = false
+ij_scss_hex_color_lower_case = false
+ij_scss_hex_color_short_format = true
+ij_scss_hex_color_upper_case = true
 ij_scss_keep_blank_lines_in_code = 1
 ij_scss_keep_indents_on_empty_lines = false
 ij_scss_keep_single_line_blocks = false
-ij_scss_properties_order = --(.*), grid-area, grid-column, grid-row, content, display, flex-direction, flex-wrap, flex-flow, align-items, align-content, justify-content, order, align-self, flex-grow, flex-shrink, flex-basis, flex, grid-template-areas, grid-template-columns, grid-template-rows, grid-auto-columns, grid-auto-rows, grid-auto-flow, grid-gap, grid-column-gap, grid-row-gap, width, min-width, max-width, height, min-height, max-height, position, z-index, top, right, bottom, left, float, clear, cursor, opacity, overflow, clip, font-family, font-size, color, font-weight, line-height, letter-spacing, text-align, text-transform, word-spacing, margin, margin-top, margin-right, margin-bottom, margin-left, border, border-radius, box-sizing, padding, padding-top, padding-right, padding-bottom, padding-left, background, background-image, background-size, background-position, background-repeat, background-clip, background-origin, background-attachment, background-color, box-shadow, outline, user-select, animation, transition
+ij_scss_properties_order = --(.*),grid-area,grid-column,grid-row,content,display,flex-direction,flex-wrap,flex-flow,align-items,align-content,justify-content,order,align-self,flex-grow,flex-shrink,flex-basis,flex,grid-template-areas,grid-template-columns,grid-template-rows,grid-auto-columns,grid-auto-rows,grid-auto-flow,grid-gap,grid-column-gap,grid-row-gap,width,min-width,max-width,height,min-height,max-height,position,z-index,top,right,bottom,left,float,clear,cursor,opacity,overflow,clip,font-family,font-size,color,font-weight,line-height,letter-spacing,text-align,text-transform,word-spacing,margin,margin-top,margin-right,margin-bottom,margin-left,border,border-radius,box-sizing,padding,padding-top,padding-right,padding-bottom,padding-left,background,background-image,background-size,background-position,background-repeat,background-clip,background-origin,background-attachment,background-color,box-shadow,outline,user-select,animation,transition
 ij_scss_space_after_colon = true
 ij_scss_space_before_opening_brace = true
 ij_scss_use_double_quotes = false
@@ -65,10 +84,11 @@ ij_editorconfig_space_before_colon = false
 ij_editorconfig_space_before_comma = false
 ij_editorconfig_spaces_around_assignment_operators = true
 
-
-[{*.cjs, *.js}]
+[{*.cjs,*.js}]
+indent_style = tab
 max_line_length = 160
 ij_continuation_indent_size = 4
+ij_smart_tabs = true
 ij_javascript_align_imports = false
 ij_javascript_align_multiline_array_initializer_expression = true
 ij_javascript_align_multiline_binary_operation = true
@@ -87,7 +107,7 @@ ij_javascript_array_initializer_wrap = on_every_item
 ij_javascript_assignment_wrap = off
 ij_javascript_binary_operation_sign_on_next_line = true
 ij_javascript_binary_operation_wrap = on_every_item
-ij_javascript_blacklist_imports = rxjs/Rx, node_modules/**, **/node_modules/**, @angular/material, @angular/material/typings/**
+ij_javascript_blacklist_imports = rxjs/Rx,node_modules/**,**/node_modules/**,@angular/material,@angular/material/typings/**
 ij_javascript_blank_lines_after_imports = 1
 ij_javascript_blank_lines_around_class = 1
 ij_javascript_blank_lines_around_field = 0
@@ -232,15 +252,17 @@ ij_javascript_while_brace_force = never
 ij_javascript_while_on_new_line = false
 ij_javascript_wrap_comments = true
 
-[{*.ctp, *.hphp, *.inc, *.module, *.php, *.php4, *.php5, *.phtml, artisan}]
+[{*.ctp,*.hphp,*.inc,*.module,*.php,*.php4,*.php5,*.phtml,artisan,wp-switch-comments}]
 max_line_length = 160
 ij_continuation_indent_size = 4
+ij_smart_tabs = true
 ij_wrap_on_typing = false
 ij_php_align_assignments = false
 ij_php_align_class_constants = true
 ij_php_align_group_field_declarations = false
 ij_php_align_inline_comments = false
 ij_php_align_key_value_pairs = true
+ij_php_align_match_arm_bodies = false
 ij_php_align_multiline_array_initializer_expression = true
 ij_php_align_multiline_binary_operation = false
 ij_php_align_multiline_chained_methods = true
@@ -249,6 +271,7 @@ ij_php_align_multiline_for = false
 ij_php_align_multiline_parameters = true
 ij_php_align_multiline_parameters_in_calls = true
 ij_php_align_multiline_ternary_operation = false
+ij_php_align_named_arguments = false
 ij_php_align_phpdoc_comments = true
 ij_php_align_phpdoc_param_names = true
 ij_php_anonymous_brace_style = next_line
@@ -261,7 +284,7 @@ ij_php_attributes_wrap = off
 ij_php_author_weight = 28
 ij_php_binary_operation_sign_on_next_line = false
 ij_php_binary_operation_wrap = off
-ij_php_blank_lines_after_class_header = 1
+ij_php_blank_lines_after_class_header = 0
 ij_php_blank_lines_after_function = 1
 ij_php_blank_lines_after_imports = 1
 ij_php_blank_lines_after_opening_tag = 1
@@ -270,7 +293,7 @@ ij_php_blank_lines_around_class = 1
 ij_php_blank_lines_around_constants = 0
 ij_php_blank_lines_around_field = 1
 ij_php_blank_lines_around_method = 1
-ij_php_blank_lines_before_class_end = 1
+ij_php_blank_lines_before_class_end = 0
 ij_php_blank_lines_before_imports = 1
 ij_php_blank_lines_before_method_body = 0
 ij_php_blank_lines_before_package = 1
@@ -283,7 +306,7 @@ ij_php_call_parameters_wrap = on_every_item
 ij_php_catch_on_new_line = false
 ij_php_category_weight = 28
 ij_php_class_brace_style = next_line
-ij_php_comma_after_last_array_element = false
+ij_php_comma_after_last_array_element = true
 ij_php_concat_spaces = true
 ij_php_copyright_weight = 28
 ij_php_deprecated_weight = 28
@@ -314,16 +337,16 @@ ij_php_indent_break_from_case = true
 ij_php_indent_case_from_switch = true
 ij_php_indent_code_in_php_tags = false
 ij_php_internal_weight = 28
-ij_php_keep_blank_lines_after_lbrace = 4
-ij_php_keep_blank_lines_before_right_brace = 4
-ij_php_keep_blank_lines_in_code = 4
-ij_php_keep_blank_lines_in_declarations = 4
+ij_php_keep_blank_lines_after_lbrace = 2
+ij_php_keep_blank_lines_before_right_brace = 2
+ij_php_keep_blank_lines_in_code = 2
+ij_php_keep_blank_lines_in_declarations = 2
 ij_php_keep_control_statement_in_one_line = true
 ij_php_keep_first_column_comment = false
 ij_php_keep_indents_on_empty_lines = false
 ij_php_keep_line_breaks = true
 ij_php_keep_rparen_and_lbrace_on_one_line = false
-ij_php_keep_simple_classes_in_one_line = false
+ij_php_keep_simple_classes_in_one_line = true
 ij_php_keep_simple_methods_in_one_line = true
 ij_php_lambda_brace_style = end_of_line
 ij_php_license_weight = 28
@@ -368,6 +391,7 @@ ij_php_see_weight = 28
 ij_php_since_weight = 28
 ij_php_sort_phpdoc_elements = true
 ij_php_space_after_colon = true
+ij_php_space_after_colon_in_enum_backed_type = true
 ij_php_space_after_colon_in_named_argument = true
 ij_php_space_after_colon_in_return_type = true
 ij_php_space_after_comma = true
@@ -382,6 +406,7 @@ ij_php_space_before_catch_parentheses = true
 ij_php_space_before_class_left_brace = true
 ij_php_space_before_closure_left_parenthesis = true
 ij_php_space_before_colon = true
+ij_php_space_before_colon_in_enum_backed_type = false
 ij_php_space_before_colon_in_named_argument = false
 ij_php_space_before_colon_in_return_type = false
 ij_php_space_before_comma = false
@@ -417,6 +442,7 @@ ij_php_spaces_around_equality_operators = true
 ij_php_spaces_around_logical_operators = true
 ij_php_spaces_around_multiplicative_operators = true
 ij_php_spaces_around_null_coalesce_operator = true
+ij_php_spaces_around_pipe_in_union_type = false
 ij_php_spaces_around_relational_operators = true
 ij_php_spaces_around_shift_operators = true
 ij_php_spaces_around_unary_operator = false
@@ -448,27 +474,15 @@ ij_php_version_weight = 28
 ij_php_while_brace_force = never
 ij_php_while_on_new_line = false
 
-[{*.har, *.jsb2, *.jsb3, *.json, .babelrc, .eslintrc, .stylelintrc, bowerrc, composer.lock, jest.config}]
-ij_json_keep_blank_lines_in_code = 0
-ij_json_keep_indents_on_empty_lines = false
-ij_json_keep_line_breaks = true
-ij_json_space_after_colon = true
-ij_json_space_after_comma = true
-ij_json_space_before_colon = true
-ij_json_space_before_comma = false
-ij_json_spaces_within_braces = false
-ij_json_spaces_within_brackets = false
-ij_json_wrap_long_lines = false
-
-[{*.htm, *.html, *.ng, *.sht, *.shtm, *.shtml}]
-ij_html_add_new_line_before_tags = body, div, p, form, h1, h2, h3
+[{*.htm,*.html,*.ng,*.sht,*.shtm,*.shtml}]
+ij_html_add_new_line_before_tags = body,div,p,form,h1,h2,h3
 ij_html_align_attributes = true
 ij_html_align_text = false
 ij_html_attribute_wrap = on_every_item
 ij_html_block_comment_at_first_column = true
 ij_html_do_not_align_children_of_min_lines = 0
-ij_html_do_not_break_if_inline_tags = title, h1, h2, h3, h4, h5, h6, p
-ij_html_do_not_indent_children_of_tags = html, body, thead, tbody, tfoot
+ij_html_do_not_break_if_inline_tags = title,h1,h2,h3,h4,h5,h6,p
+ij_html_do_not_indent_children_of_tags = html,body,thead,tbody,tfoot
 ij_html_enforce_quotes = true
 ij_html_inline_tags = none
 ij_html_keep_blank_lines = 1
@@ -486,9 +500,8 @@ ij_html_space_after_tag_name = false
 ij_html_space_around_equality_in_attribute = false
 ij_html_space_inside_empty_tag = true
 ij_html_text_wrap = off
-ij_html_uniform_ident = false
 
-[{*.markdown, *.md}]
+[{*.markdown,*.md}]
 ij_markdown_force_one_space_after_blockquote_symbol = true
 ij_markdown_force_one_space_after_header_symbol = true
 ij_markdown_force_one_space_after_list_bullet = true
@@ -500,9 +513,3 @@ ij_markdown_max_lines_between_paragraphs = 1
 ij_markdown_min_lines_around_block_elements = 1
 ij_markdown_min_lines_around_header = 1
 ij_markdown_min_lines_between_paragraphs = 1
-
-[{*.properties, spring.handlers, spring.schemas}]
-ij_properties_align_group_field_declarations = false
-ij_properties_keep_blank_lines = true
-ij_properties_key_value_delimiter = equals
-ij_properties_spaces_around_key_value_delimiter = true
