@@ -9,12 +9,11 @@ load: ## Dumps the autoloader
 
 .PHONY: lint
 lint: ## Analyse the code
-	-./vendor/bin/phpmd src,acf-image-map.php text phpmd.xml
-	-./vendor/bin/phpstan analyse --memory-limit=2G
-	-./vendor/bin/phpcs
-	-./node_modules/.bin/eslint . --fix
-	-./node_modules/.bin/stylelint '**/*.scss' --fix
-
+	./vendor/bin/phpmd src,acf-image-map.php text phpmd.xml
+	./vendor/bin/phpstan analyse --memory-limit=2G
+	./vendor/bin/phpcs
+	./node_modules/.bin/eslint . --fix
+	./node_modules/.bin/stylelint '**/*.scss' --fix
 
 .PHONY: format
 format: ## Format the code
