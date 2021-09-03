@@ -1,6 +1,6 @@
 {
-    "phpVersion": "7.3",
-    "tabWidth": 4,
-    "singleQuote": true,
-    "useTabs": false
+	"phpVersion": "7.3",
+	"tabWidth": 4,
+	"singleQuote": true,
+	"useTabs": false
 }

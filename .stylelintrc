@@ -1,106 +1,106 @@
 {
-    "extends": [
-        "stylelint-config-standard",
-        "stylelint-config-prettier"
-    ],
-    "plugins": [
-        "stylelint-scss",
-        "stylelint-prettier"
-    ],
-    "rules": {
-        "color-hex-case": "lower",
-        "color-no-invalid-hex": true,
-        "prettier/prettier": true,
-        "at-rule-no-unknown": null,
-        "scss/at-rule-no-unknown": [
-            true
-        ],
-        "color-named": "never",
-        "function-name-case": [
-            "lower",
-            {
-                "ignoreFunctions": [
-                    "/toRGB/"
-                ]
-            }
-        ],
-        "declaration-block-no-duplicate-properties": [
-            true,
-            {
-                "ignore": [
-                    "consecutive-duplicates-with-different-values"
-                ]
-            }
-        ],
-        "declaration-empty-line-before": null,
-        "declaration-property-unit-allowed-list": {
-            "/^border(?!.*-radius$)/": [
-                "px",
-                "%"
-            ],
-            "/^border-radius/": [
-                "px",
-                "rem",
-                "%"
-            ],
-            "/^box-shadow": [
-                "px"
-            ],
-            "/^margin/": [
-                "rem",
-                "px",
-                "%",
-                "vw"
-            ],
-            "/^padding/": [
-                "rem",
-                "px"
-            ],
-            "font-size": [
-                "rem",
-                "em",
-                "%"
-            ],
-            "height": [
-                "rem",
-                "px",
-                "%",
-                "vh"
-            ],
-            "width": [
-                "rem",
-                "px",
-                "%",
-                "vw"
-            ]
-        },
-        "max-empty-lines": 1,
-        "no-duplicate-selectors": true,
-        "scss/selector-no-redundant-nesting-selector": true,
-        "selector-max-compound-selectors": [
-            5,
-            {
-                "message": "Descendent selectors break encapsulation and are bad for performance. Please try using BEM class names instead and nesting/combining them with &",
-                "severity": "warning"
-            }
-        ],
-        "selector-max-id": [
-            0
-        ],
-        "string-quotes": "single",
-        "value-no-vendor-prefix": true,
-        "font-family-no-missing-generic-family-keyword": null,
-        "no-descending-specificity": null,
-        "selector-pseudo-class-no-unknown": [
-            true,
-            {
-                "ignorePseudoClasses": [
-                    "global"
-                ]
-            }
-        ],
-        "indentation": [
-            2
-        ]
-    }
+	"extends": [
+		"stylelint-config-standard",
+		"stylelint-config-prettier"
+	],
+	"plugins": [
+		"stylelint-scss",
+		"stylelint-prettier"
+	],
+	"rules": {
+		"color-hex-case": "lower",
+		"color-no-invalid-hex": true,
+		"prettier/prettier": true,
+		"at-rule-no-unknown": null,
+		"scss/at-rule-no-unknown": [
+			true
+		],
+		"color-named": "never",
+		"function-name-case": [
+			"lower",
+			{
+				"ignoreFunctions": [
+					"/toRGB/"
+				]
+			}
+		],
+		"declaration-block-no-duplicate-properties": [
+			true,
+			{
+				"ignore": [
+					"consecutive-duplicates-with-different-values"
+				]
+			}
+		],
+		"declaration-empty-line-before": null,
+		"declaration-property-unit-allowed-list": {
+			"/^border(?!.*-radius$)/": [
+				"px",
+				"%"
+			],
+			"/^border-radius/": [
+				"px",
+				"rem",
+				"%"
+			],
+			"/^box-shadow": [
+				"px"
+			],
+			"/^margin/": [
+				"rem",
+				"px",
+				"%",
+				"vw"
+			],
+			"/^padding/": [
+				"rem",
+				"px"
+			],
+			"font-size": [
+				"rem",
+				"em",
+				"%"
+			],
+			"height": [
+				"rem",
+				"px",
+				"%",
+				"vh"
+			],
+			"width": [
+				"rem",
+				"px",
+				"%",
+				"vw"
+			]
+		},
+		"max-empty-lines": 1,
+		"no-duplicate-selectors": true,
+		"scss/selector-no-redundant-nesting-selector": true,
+		"selector-max-compound-selectors": [
+			5,
+			{
+				"message": "Descendent selectors break encapsulation and are bad for performance. Please try using BEM class names instead and nesting/combining them with &",
+				"severity": "warning"
+			}
+		],
+		"selector-max-id": [
+			0
+		],
+		"string-quotes": "single",
+		"value-no-vendor-prefix": true,
+		"font-family-no-missing-generic-family-keyword": null,
+		"no-descending-specificity": null,
+		"selector-pseudo-class-no-unknown": [
+			true,
+			{
+				"ignorePseudoClasses": [
+					"global"
+				]
+			}
+		],
+		"indentation": [
+			2
+		]
+	}
 }
