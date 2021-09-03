@@ -1,0 +1,5 @@
+node_module/**
+vendor/**
+dist/**
+!*.css
+!*.scss

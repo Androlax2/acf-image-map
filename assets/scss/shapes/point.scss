@@ -1,0 +1,63 @@
+.acfImageMapPoint {
+  max-width: 400px;
+  position: relative;
+}
+
+/*
+|--------------------------------------------------------------------------
+| IMAGE
+|--------------------------------------------------------------------------
+*/
+
+.acfImageMapPoint img {
+  display: block;
+  width: 100%;
+  position: relative;
+  cursor: crosshair;
+  overflow: hidden;
+}
+
+/*
+|--------------------------------------------------------------------------
+| POINT
+|--------------------------------------------------------------------------
+*/
+
+.acfImageMapPoint__point {
+  display: none;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background: #fff;
+  background: radial-gradient(#fff, #fff 20%, #000);
+  transform: translate(-50%, -50%);
+}
+.acfImageMapPoint__point::after {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -2px;
+  margin-left: -2px;
+  border-radius: 3px;
+  background: #f00f;
+}
+.acfImageMapPoint__point.isActive {
+  display: block;
+}
+
+/*
+|--------------------------------------------------------------------------
+| INPUT
+|--------------------------------------------------------------------------
+*/
+
+.acfImageMapPoint__input {
+  display: block;
+  margin-top: 10px;
+}

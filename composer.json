@@ -1,0 +1,36 @@
+{
+    "name": "androlax2/acf-image-map",
+    "type": "wordpress-plugin",
+    "description": "An ACF field to map shapes in image.",
+    "license": "MIT",
+    "keywords": [
+        "wordpress",
+        "acf",
+        "acf-field",
+        "image-map"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Androlax2\\AcfImageMap\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.3",
+        "illuminate/collections": "^8.58"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.6",
+        "phpmd/phpmd": "^2.10",
+        "slevomat/coding-standard": "^7.0",
+        "szepeviktor/phpstan-wordpress": "^0.7.7",
+        "paulthewalton/acf-stubs": "^5.8",
+        "paulthewalton/acf-pro-stubs": "5.8.9.1"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
