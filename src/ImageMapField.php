@@ -70,6 +70,7 @@ class ImageMapField extends acf_field
      * your field is created.
      *
      * @return void
+     * @SuppressWarnings(PHPMD.CamelCaseMethodName)
      */
     // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public function input_admin_enqueue_scripts(): void
@@ -84,6 +85,7 @@ class ImageMapField extends acf_field
      * @param array $field
      *
      * @return void
+     * @SuppressWarnings(PHPMD.CamelCaseMethodName)
      */
     // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public function render_field(array $field)
@@ -98,29 +100,30 @@ class ImageMapField extends acf_field
      * @param array $field
      *
      * @return void
+     * @SuppressWarnings(PHPMD.CamelCaseMethodName)
      */
     // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public function render_field_settings(array $field)
     {
         // Image to use.
         acf_render_field_setting($field, [
-            'name' => 'image_field_label',
-            'label' => 'Image Field Label',
+            'name'         => 'image_field_label',
+            'label'        => 'Image Field Label',
             'instructions' => 'Field label of image field to map.',
-            'type' => 'text',
-            'required' => true,
+            'type'         => 'text',
+            'required'     => true,
         ]);
 
         // Shape to use.
         acf_render_field_setting($field, [
-            'name' => 'shape',
-            'label' => 'Shape',
-            'instructions' => 'The shape to use to map the image.',
-            'type' => 'select',
-            'ui' => 1,
-            'required' => true,
+            'name'          => 'shape',
+            'label'         => 'Shape',
+            'instructions'  => 'The shape to use to map the image.',
+            'type'          => 'select',
+            'ui'            => 1,
+            'required'      => true,
             'default_value' => $this->defaultShape->getLabel(),
-            'choices' => collect($this->shapes)
+            'choices'       => collect($this->shapes)
                 ->mapWithKeys(function (ShapeContract $shape) {
                     return [$shape->getName() => $shape->getLabel()];
                 })
@@ -142,6 +145,9 @@ class ImageMapField extends acf_field
      * @param array $field
      *
      * @return mixed
+     * @SuppressWarnings(PHPMD.CamelCaseMethodName)
+     * @SuppressWarnings(PHPMD.CamelCaseParameterName)
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public function format_value($value, $post_id, $field)
@@ -155,12 +161,15 @@ class ImageMapField extends acf_field
      * @param string $shape Label name of the shape.
      *
      * @return ShapeContract
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     protected function findShape(string $shape): ShapeContract
     {
-        return collect($this->shapes)->first(function (ShapeContract $item, $key) use ($shape) {
-            return $key === $shape;
-        });
+        return collect($this->shapes)->first(
+            function (ShapeContract $item, $key) use ($shape) {
+                return $key === $shape;
+            }
+        );
     }
 
     /**

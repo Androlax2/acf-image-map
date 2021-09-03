@@ -18,7 +18,10 @@ class Point implements Shape
         return 'point';
     }
 
-    /** @inhertiDoc */
+    /**
+     * @inhertiDoc
+     * @SuppressWarnings(PHPMD.ShortVariable)
+     */
     public function renderShape(array $field): void
     {
         $name = esc_attr($field['name']);
@@ -52,9 +55,9 @@ class Point implements Shape
     {
         $conditionalLogic = [
             [
-                'field' => $fieldName,
+                'field'    => $fieldName,
                 'operator' => '==',
-                'value' => $this->getName(),
+                'value'    => $this->getName(),
             ],
         ];
 
@@ -87,11 +90,11 @@ class Point implements Shape
     {
         return [
             'percentage' => [
-                'name' => 'percentage',
-                'label' => 'Percentage Based Coordinates',
+                'name'         => 'percentage',
+                'label'        => 'Percentage Based Coordinates',
                 'instructions' => 'Convert the coordinate pair to percentages instead of the raw X / Y pair.',
-                'ui' => 1,
-                'type' => 'true_false',
+                'ui'           => 1,
+                'type'         => 'true_false',
             ],
         ];
     }
