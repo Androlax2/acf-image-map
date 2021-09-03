@@ -18,8 +18,6 @@ export default class Point {
         };
 
         this.$linkedImage = this._getLinkedImage();
-
-        this._init();
     }
 
     /**
@@ -139,10 +137,8 @@ export default class Point {
 
     /**
      * Set up the object.
-     *
-     * @private
      */
-    _init() {
+    init() {
         if (!this.$linkedImage) {
             return;
         }

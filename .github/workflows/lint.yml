@@ -34,4 +34,4 @@ jobs:
       - name: Install Yarn dependencies
         run: yarn --no-progress
       - name: Lint
-        run: make lint
+        run: make lintWithoutFixes

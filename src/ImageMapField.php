@@ -106,23 +106,23 @@ class ImageMapField extends \acf_field
     {
         // Image to use.
         acf_render_field_setting($field, [
-            'name'         => 'image_field_label',
-            'label'        => 'Image Field Label',
+            'name' => 'image_field_label',
+            'label' => 'Image Field Label',
             'instructions' => 'Field label of image field to map.',
-            'type'         => 'text',
-            'required'     => true,
+            'type' => 'text',
+            'required' => true,
         ]);
 
         // Shape to use.
         acf_render_field_setting($field, [
-            'name'          => 'shape',
-            'label'         => 'Shape',
-            'instructions'  => 'The shape to use to map the image.',
-            'type'          => 'select',
-            'ui'            => 1,
-            'required'      => true,
+            'name' => 'shape',
+            'label' => 'Shape',
+            'instructions' => 'The shape to use to map the image.',
+            'type' => 'select',
+            'ui' => 1,
+            'required' => true,
             'default_value' => $this->defaultShape->getLabel(),
-            'choices'       => collect($this->shapes)
+            'choices' => collect($this->shapes)
                 ->mapWithKeys(function (ShapeContract $shape) {
                     return [$shape->getName() => $shape->getLabel()];
                 })
@@ -165,11 +165,9 @@ class ImageMapField extends \acf_field
      */
     protected function findShape(string $shape): ShapeContract
     {
-        return collect($this->shapes)->first(
-            function (ShapeContract $item, $key) use ($shape) {
-                return $key === $shape;
-            }
-        );
+        return collect($this->shapes)->first(function (ShapeContract $item, $key) use ($shape) {
+            return $key === $shape;
+        });
     }
 
     /**
@@ -179,7 +177,7 @@ class ImageMapField extends \acf_field
      */
     protected function getShapes(): array
     {
-        $shapeFiles = glob(sprintf("%s/src/Shapes/*", dirname(__DIR__)));
+        $shapeFiles = glob(sprintf('%s/src/Shapes/*', dirname(__DIR__)));
 
         if (!$shapeFiles) {
             return [];
