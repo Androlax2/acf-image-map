@@ -21,7 +21,7 @@ interface Shape
     /**
      * Create the HTML interface for your shape.
      *
-     * @param array $field
+     * @param array<string, mixed> $field
      */
     public function renderShape(array $field): void;
 
@@ -29,13 +29,15 @@ interface Shape
      * Create settings for your shape.
      * These are visible when editing the image map field.
      *
-     * @param array  $fields    The field being edited
-     * @param string $fieldName Field name used to select the shape to use.
+     * @param array<string, mixed> $fields    The field being edited
+     * @param string               $fieldName Field name used to select the shape to use.
      */
     public function renderShapeSettings(array $fields, string $fieldName): void;
 
     /**
      * Format the value returning by a shape to the front-end.
+     *
+     * @param mixed $value
      *
      * @return mixed
      */

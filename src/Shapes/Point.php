@@ -71,7 +71,7 @@ class Point implements Shape
      *
      * @param mixed $value Coords of the point separated by a comma.
      *
-     * @return array
+     * @return array{x: string, y: string}
      */
     public function formatValue($value): array
     {
@@ -84,7 +84,9 @@ class Point implements Shape
     }
 
     /**
-     * @return array
+     * Return an array of settings for this shape.
+     *
+     * @return array<string, array<string, mixed>>
      */
     protected function settings(): array
     {

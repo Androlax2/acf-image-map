@@ -28,6 +28,10 @@ tab_width = 2
 indent_size = 2
 tab_width = 2
 
+[*.neon]
+indent_size = 2
+tab_width = 2
+
 [*.css]
 ij_css_align_closing_brace_with_properties = false
 ij_css_blank_lines_around_nested_selector = 1

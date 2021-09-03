@@ -1,10 +1,12 @@
 includes:
-	    - vendor/szepeviktor/phpstan-wordpress/extension.neon
+  - vendor/szepeviktor/phpstan-wordpress/extension.neon
 parameters:
 	level: 8
 	paths:
 		- src
 		- acf-image-map.php
+	bootstrapFiles:
+	  - vendor/paulthewalton/acf-pro-stubs/acf-pro-stubs.php
 	scanFiles:
-	    - vendor/paulthewalton/acf-stubs/acf-stubs.php
-	    - vendor/paulthewalton/acf-pro-stubs/acf-pro-stubs.php
+	  - vendor/paulthewalton/acf-stubs/acf-stubs.php
+	  - vendor/paulthewalton/acf-pro-stubs/acf-pro-stubs.php

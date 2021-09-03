@@ -2,11 +2,10 @@
 
 namespace Androlax2\AcfImageMap;
 
-use acf_field;
 use Androlax2\AcfImageMap\Contracts\Shape as ShapeContract;
 use Androlax2\AcfImageMap\Shapes\Point;
 
-class ImageMapField extends acf_field
+class ImageMapField extends \acf_field
 {
     /**
      * Path to the assets path of the field.
@@ -46,7 +45,7 @@ class ImageMapField extends acf_field
     /**
      * All shapes object.
      *
-     * @var array
+     * @var array<ShapeContract>
      */
     protected $shapes = [];
 
@@ -82,7 +81,7 @@ class ImageMapField extends acf_field
     /**
      * Create the HTML interface for your field.
      *
-     * @param array $field
+     * @param array<string, mixed> $field
      *
      * @return void
      * @SuppressWarnings(PHPMD.CamelCaseMethodName)
@@ -97,7 +96,7 @@ class ImageMapField extends acf_field
      * Create extra settings for your field.
      * These are visible when editing a field.
      *
-     * @param array $field
+     * @param array<string, mixed> $field
      *
      * @return void
      * @SuppressWarnings(PHPMD.CamelCaseMethodName)
@@ -141,8 +140,9 @@ class ImageMapField extends acf_field
      * This filter is applied to the $value after it is loaded from the database and
      * before it is returned to the template.
      *
-     * @param mixed $value
-     * @param array $field
+     * @param mixed                $value
+     * @param mixed                $post_id
+     * @param array<string, mixed> $field
      *
      * @return mixed
      * @SuppressWarnings(PHPMD.CamelCaseMethodName)
@@ -150,7 +150,7 @@ class ImageMapField extends acf_field
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
-    public function format_value($value, $post_id, $field)
+    public function format_value($value, $post_id, array $field)
     {
         return $this->findShape($field['shape'])->formatValue($value);
     }
@@ -175,13 +175,19 @@ class ImageMapField extends acf_field
     /**
      * Return an array containing the shapes object.
      *
-     * @return array
+     * @return array<string, ShapeContract>
      */
     protected function getShapes(): array
     {
+        $shapeFiles = glob(sprintf("%s/src/Shapes/*", dirname(__DIR__)));
+
+        if (!$shapeFiles) {
+            return [];
+        }
+
         $shapes = [];
 
-        foreach (glob(dirname(__DIR__) . '/src/Shapes/*') as $shapeFile) {
+        foreach ($shapeFiles as $shapeFile) {
             include_once $shapeFile;
 
             $class = basename($shapeFile, '.php');
