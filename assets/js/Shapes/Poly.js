@@ -14,7 +14,7 @@ export default class Poly {
             input: $field.find('.acfImageMapPoly__input'),
             resetButton: $field.find('.acfImageMapPoly__reset'),
             imageWidthInput: $field.find('.acfImageMapPoly__imageWidth'),
-            areaInput: $field.find('.acfImageMapPoly__areaInput')
+            areaInput: $field.find('.acfImageMapPoly__areaInput'),
         };
         const fieldSelector = this.$field.image.attr('data-label');
         this.$field.selector = `[data-name="${fieldSelector}"]`;
@@ -25,11 +25,11 @@ export default class Poly {
         if (this.$field.input.val()) {
             const imageWidth = parseInt(this.$field.imageWidthInput.val());
 
-            chunk(this.$field.input.val().split(','), 2).forEach(coords => {
-                //@formatter:off
-                let x = parseInt(coords[0]);
-                let y =parseInt(coords[1]);
-                //@formatter:on
+            chunk(this.$field.input.val().split(','), 2).forEach((coords) => {
+                // @formatter:off
+                const x = parseInt(coords[0]);
+                const y = parseInt(coords[1]);
+                // @formatter:on
 
                 const $point = this._createPointElement();
 
@@ -37,7 +37,7 @@ export default class Poly {
                     imageWidth: imageWidth,
                     $el: $point,
                     x,
-                    y
+                    y,
                 });
 
                 this._movePoint(x, y, $point);
@@ -134,15 +134,15 @@ export default class Poly {
      * @private
      */
     _handleClick(e) {
-        let x = e.offsetX;
-        let y = e.offsetY;
+        const x = e.offsetX;
+        const y = e.offsetY;
         const $point = this._createPointElement();
 
         this.pointCoords.push({
             imageWidth: this._imageDimensions().width,
             $el: $point,
             x,
-            y
+            y,
         });
 
         this._movePoint(x, y, $point);
@@ -159,13 +159,13 @@ export default class Poly {
             return;
         }
 
-        const {width} = this._imageDimensions();
+        const { width } = this._imageDimensions();
 
-        this.pointCoords.map(pointCoord => {
-            //@formatter:off
+        this.pointCoords.forEach((pointCoord) => {
+            // @formatter:off
             pointCoord.x = Math.round(pointCoord.x * (width / pointCoord.imageWidth));
             pointCoord.y = Math.round(pointCoord.y * (width / pointCoord.imageWidth));
-            //@formatter:on
+            // @formatter:on
             pointCoord.imageWidth = width;
             this._movePoint(pointCoord.x, pointCoord.y, pointCoord.$el, false);
         });
@@ -205,14 +205,14 @@ export default class Poly {
      * @private
      */
     _updateArea() {
-        const {width, naturalWidth} = this._imageDimensions();
+        const { width, naturalWidth } = this._imageDimensions();
         const ratio = naturalWidth / width;
 
         const points = this.polygon.getAttribute('points').split(',');
 
-        //@formatter:off
-        this.$field.areaInput.val(points.map(point => Math.round(point * ratio)).join(','));
-        //@formatter:on
+        // @formatter:off
+        this.$field.areaInput.val(points.map((point) => Math.round(point * ratio)).join(','));
+        // @formatter:on
     }
 
     /**
@@ -243,7 +243,7 @@ export default class Poly {
             width: this.$field.image.width(),
             height: this.$field.image.height(),
             naturalWidth: this.$field.image[0].naturalWidth,
-            naturalHeight: this.$field.image[0].naturalHeight
+            naturalHeight: this.$field.image[0].naturalHeight,
         };
     }
 

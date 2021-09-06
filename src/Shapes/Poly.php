@@ -48,7 +48,13 @@ class Poly implements Shape
     {
     }
 
-    /** @inheritDoc */
+    /**
+     * Format the poly to return an array containing the coords.
+     *
+     * @param mixed $value Coords of the points separated by a comma.
+     *
+     * @return array{area_coords: string}
+     */
     public function formatValue($value): array
     {
         return [
