@@ -1,12 +1,10 @@
 <?php
 
-// TODO : Remplir xxx
-
 /**
  * Plugin Name: Advanced Custom Fields: Image map
- * Plugin URI:  xxx
+ * Plugin URI:  1.0.2
  * Description: An ACF field to map shapes in image.
- * Version:     xxx
+ * Version:     1.0.2
  * Author:      Théo Benoit
  * Author URI:  https://github.com/Androlax2
  */
@@ -15,7 +13,8 @@ namespace Androlax2\AcfImageMap;
 
 add_filter(
     'after_setup_theme',
-    new class {
+    new class
+    {
         /**
          * The asset public path.
          *
