@@ -23,7 +23,7 @@ jobs:
       - name: Install Composer dependencies
         run: composer install --no-progress --prefer-dist --optimize-autoloader --no-suggest --no-dev
       - name: Cleanup unnecessary files
-        run: rm -rf .git .github .editorconfig .babelrc .browserlistrc .eslintignore .eslintrc .gitignore asset .prettierignore .prettierrc .stylelintignore .stylelintrc composer.json composer.lock gulpfile.babel.js Makefile package.json phpcs.xml phpmd.xml phpstan.neon yarn.lock
+        run: rm -rf .git .github .editorconfig .babelrc .browserlistrc .eslintignore .eslintrc .gitignore assets .prettierignore .prettierrc .stylelintignore .stylelintrc composer.json composer.lock gulpfile.babel.js Makefile package.json phpcs.xml phpmd.xml phpstan.neon yarn.lock
       - name: Get the version
         id: get_version
         run: echo ::set-output name=version::${GITHUB_REF/refs\/tags\//}
