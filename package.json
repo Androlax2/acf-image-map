@@ -24,7 +24,7 @@
         "gulp-sourcemaps": "^3.0.0",
         "gulp-util": "^3.0.8",
         "node-sass": "^6.0.1",
-        "postcss": "^8.3.6",
+        "postcss": "^8.4.31",
         "postcss-css-variables": "^0.18.0",
         "postcss-gap-properties": "^2.0.0",
         "postcss-nested": "^5.0.6",
