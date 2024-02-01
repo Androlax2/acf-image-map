@@ -11,7 +11,7 @@
 
 namespace Androlax2\AcfImageMap;
 
-add_filter(
+add_filter( // @phpstan-ignore-line
     'after_setup_theme',
     new class
     {
