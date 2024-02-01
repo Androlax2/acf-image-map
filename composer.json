@@ -16,7 +16,7 @@
     },
     "require": {
         "php": ">=7.3",
-        "illuminate/collections": "^8.58"
+        "illuminate/collections": "^8.58 || ~9.0"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.6",
@@ -29,7 +29,10 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
