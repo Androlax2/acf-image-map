@@ -42,7 +42,7 @@ If you are using [ACF Builder](https://github.com/StoutLogic/acf-builder) :
 ```php
 $field
   ->addImage('my_image')
-  ->addField('my_point_coords', 'acf_image_map', [
+  ->addField('my_point_coords', 'image_map', [
     'image_field_label' => 'my_image',
     'shape' => 'point',
     'percentage' => true,
@@ -54,7 +54,7 @@ $field
 ```php
 $field
   ->addImage('my_image')
-  ->addField('my_poly_coords', 'acf_image_map', [
+  ->addField('my_poly_coords', 'image_map', [
     'image_field_label' => 'my_image',
     'shape' => 'poly',
   ]);
@@ -71,7 +71,7 @@ Let's imagine that we have the fields defined above:
 ```php
 $field
   ->addImage('my_image')
-  ->addField('my_point_coords', 'acf_image_map', [
+  ->addField('my_point_coords', 'image_map', [
     'image_field_label' => 'my_image',
     'shape' => 'point',
     'percentage' => true,
@@ -103,7 +103,7 @@ Let's imagine that we have the fields defined above:
 ```php
 $field
   ->addImage('my_image')
-  ->addField('my_poly_coords', 'acf_image_map', [
+  ->addField('my_poly_coords', 'image_map', [
     'image_field_label' => 'my_image',
     'shape' => 'poly',
   ]);
