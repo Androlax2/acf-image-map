@@ -31,7 +31,7 @@
         "prettier": "^2.3.2",
         "rfs": "^9.0.5",
         "vinyl-named": "^1.1.0",
-        "webpack": "^5.51.2",
+        "webpack": "^5.90.0",
         "webpack-stream": "^7.0.0",
         "stylelint": "^13.13.1",
         "stylelint-config-prettier": "^8.0.2",
