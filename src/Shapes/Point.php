@@ -32,8 +32,8 @@ class Point implements Shape
 
         $xyPair = explode(',', $value);
 
-        $x = $xyPair[0] ?: 0;
-        $y = $xyPair[1] ?: 0;
+        $x = !empty($xyPair[0]) ? $xyPair[0] : 0;
+        $y = !empty($xyPair[1]) ? $xyPair[1] : 0;
 
         $isPointActive = $x !== 0 && $y !== 0;
         $pointClass = 'acfImageMapPoint__point';
@@ -78,8 +78,8 @@ class Point implements Shape
         $coords = explode(',', $value);
 
         return [
-            'x' => $coords[0],
-            'y' => $coords[1],
+            'x' => $coords[0] ?? '0',
+            'y' => $coords[1] ?? '0',
         ];
     }
 
