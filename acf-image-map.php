@@ -2,9 +2,9 @@
 
 /**
  * Plugin Name: Advanced Custom Fields: Image map
- * Plugin URI:  1.0.2
+ * Plugin URI:  1.0.3
  * Description: An ACF field to map shapes in image.
- * Version:     1.0.2
+ * Version:     1.0.3
  * Author:      Théo Benoit
  * Author URI:  https://github.com/Androlax2
  */
