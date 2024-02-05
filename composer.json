@@ -22,7 +22,7 @@
         "paulthewalton/acf-pro-stubs": "5.8.9.1",
         "paulthewalton/acf-stubs": "^5.8",
         "phpmd/phpmd": "^2.10",
-        "slevomat/coding-standard": "^7.0",
+        "slevomat/coding-standard": "^8.14",
         "squizlabs/php_codesniffer": "^3.6",
         "szepeviktor/phpstan-wordpress": "^1.3"
     },
