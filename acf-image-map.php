@@ -11,10 +11,10 @@
 
 namespace Androlax2\AcfImageMap;
 
+// @phpstan-ignore-next-line
 add_filter(
     'after_setup_theme',
-    new class
-    {
+    new class {
         /**
          * The asset public path.
          *
