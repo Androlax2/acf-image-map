@@ -36,7 +36,7 @@
         "postcss-gap-properties": "^2.0.0",
         "postcss-nested": "^5.0.6",
         "prettier": "^2.3.2",
-        "rfs": "^9.0.5",
+        "rfs": "^10.0.0",
         "sass": "^1.70.0",
         "stylelint": "^13.13.1",
         "stylelint-config-prettier": "^8.0.2",
