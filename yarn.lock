@@ -1093,14 +1093,14 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@prettier/plugin-php@^0.17.4":
-  version "0.17.6"
-  resolved "https://registry.yarnpkg.com/@prettier/plugin-php/-/plugin-php-0.17.6.tgz#49e2cb091da89d525842412d2de20fc3ca3d1a20"
-  integrity sha512-Nxkq+Gl8bGbutRV7e3/p5d+Bcftn75oH61RT8xzk44T5ET7fVP50pUdaOdvt704GSNr6wwmfBW8MhBz5IKt+fA==
+"@prettier/plugin-php@^0.19.7":
+  version "0.19.7"
+  resolved "https://registry.yarnpkg.com/@prettier/plugin-php/-/plugin-php-0.19.7.tgz#c11b710f319f83c276b6b3f8ab3f70f612302785"
+  integrity sha512-QOzBs05nwuR92uak7xBHf7RCZCFXml+6Sk3cjTp2ahQlilBtupqlNjitlTXsOfPIAYwlFgLP1oSfyapS6DN00w==
   dependencies:
-    linguist-languages "^7.5.1"
+    linguist-languages "^7.21.0"
     mem "^8.0.0"
-    php-parser "https://github.com/glayzzle/php-parser#27abcb2337ac6450c068ef064982dfabf77916a5"
+    php-parser "^3.1.5"
 
 "@stylelint/postcss-css-in-js@^0.37.2":
   version "0.37.3"
@@ -4353,7 +4353,7 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.2.4.tgz#eca284f75d2965079309dc0ad9255abb2ebc1632"
   integrity sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
 
-linguist-languages@^7.5.1:
+linguist-languages@^7.21.0:
   version "7.27.0"
   resolved "https://registry.yarnpkg.com/linguist-languages/-/linguist-languages-7.27.0.tgz#bf42d6c62bd04655c8f60ed2f77a84eaeae4023a"
   integrity sha512-Wzx/22c5Jsv2ag+uKy+ITanGA5hzvBZngrNGDXLTC7ZjGM6FLCYGgomauTkxNJeP9of353OM0pWqngYA180xgw==
@@ -5238,9 +5238,10 @@ path-type@^4.0.0:
   resolved "https://registry.yarnpkg.com/path-type/-/path-type-4.0.0.tgz#84ed01c0a7ba380afe09d90a8c180dcd9d03043b"
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
 
-"php-parser@git+https://github.com/glayzzle/php-parser.git#27abcb2337ac6450c068ef064982dfabf77916a5":
-  version "3.0.2"
-  resolved "git+https://github.com/glayzzle/php-parser.git#27abcb2337ac6450c068ef064982dfabf77916a5"
+php-parser@^3.1.5:
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/php-parser/-/php-parser-3.1.5.tgz#84500e5b5c6a0907e32c38b931bb4e7d3f275026"
+  integrity sha512-jEY2DcbgCm5aclzBdfW86GM6VEIWcSlhTBSHN1qhJguVePlYe28GhwS0yoeLYXpM2K8y6wzLwrbq814n2PHSoQ==
 
 picocolors@^0.2.1:
   version "0.2.1"
