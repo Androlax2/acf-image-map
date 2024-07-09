@@ -1,6 +1,7 @@
 {
     "private": true,
     "name": "acf-image-map",
+    "type": "module"
     "scripts": {
         "dev": "./node_modules/gulp/bin/gulp.js dev",
         "build": "./node_modules/gulp/bin/gulp.js build",
