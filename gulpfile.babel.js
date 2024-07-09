@@ -1,6 +1,4 @@
 import { dest, parallel, series, src, watch } from 'gulp';
-import gulpSass from 'gulp-sass';
-import nodeSass from 'node-sass';
 import postcss from 'gulp-postcss';
 import sourcemaps from 'gulp-sourcemaps';
 import del from 'del';
@@ -12,7 +10,7 @@ import nested from 'postcss-nested';
 import util from 'gulp-util';
 import postcssGapProperties from 'postcss-gap-properties';
 
-const sass = gulpSass(nodeSass);
+const sass = require('gulp-sass')(require('sass'));
 
 const config = {
     production: !!util.env.production,
