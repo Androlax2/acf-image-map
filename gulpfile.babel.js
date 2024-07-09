@@ -1,7 +1,6 @@
 import { dest, parallel, series, src, watch } from 'gulp';
 import postcss from 'gulp-postcss';
 import sourcemaps from 'gulp-sourcemaps';
-import del from 'del';
 import webpack from 'webpack-stream';
 import named from 'vinyl-named';
 import cssvariables from 'postcss-css-variables';
@@ -85,7 +84,9 @@ export const copy = () => {
 /**
  * Task to clean the dist folder
  */
-export const clean = () => del(['dist']);
+export const clean = () => {
+    return src('dist/*', { read: false }).pipe(require('gulp-clean')());
+}
 
 /**
  * Watch for changes and start the task needed
