@@ -27,22 +27,14 @@ export default class Point {
      * @private
      */
     _getLinkedImage() {
-        let $imgCon = this.$field.element.siblings(this.$field.selector);
-        let $repeaterParent = this.$field.element.parents('.acf-field-repeater');
+        let img = this.$field.element[0]?.closest(':has(' + this.$field.selector + ')')?.querySelector(this.$field.selector + ' img[data-name="image"]');
 
-        while (!$imgCon.length) {
-            if (!$repeaterParent.length) {
-                console.error('Could not find a match for the linked image');
-                return false;
-            }
-
-            $imgCon = $repeaterParent.siblings(this.$field.selector);
-
-            // Get the next repeater parent
-            $repeaterParent = $repeaterParent.parents('.acf-field-repeater');
+        if (!img) {
+            console.error('Could not find a match for the linked image');
+            return false;
         }
 
-        return $imgCon.find('img[data-name="image"]');
+        return jQuery(img);
     }
 
     /**
