@@ -86,7 +86,7 @@ export const copy = () => {
  */
 export const clean = () => {
     return src('dist/*', { read: false }).pipe(require('gulp-clean')());
-}
+};
 
 /**
  * Watch for changes and start the task needed

@@ -27,14 +27,14 @@ export default class Point {
      * @private
      */
     _getLinkedImage() {
-        let img = this.$field.element[0]?.closest(':has(' + this.$field.selector + ')')?.querySelector(this.$field.selector + ' img[data-name="image"]');
+        const img = this.$field.element.closest(':has(' + this.$field.selector + ')').find(this.$field.selector + ' img[data-name="image"]');
 
-        if (!img) {
+        if (!img.length) {
             console.error('Could not find a match for the linked image');
             return false;
         }
 
-        return jQuery(img);
+        return img;
     }
 
     /**
