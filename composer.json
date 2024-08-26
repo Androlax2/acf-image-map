@@ -16,7 +16,7 @@
     },
     "require": {
         "php": ">=7.3",
-        "illuminate/collections": "^8.58 || ~9.0"
+        "illuminate/collections": "^11.21.0"
     },
     "require-dev": {
         "paulthewalton/acf-pro-stubs": "5.8.9.1",
