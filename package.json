@@ -37,7 +37,7 @@
         "postcss-nested": "^5.0.6",
         "prettier": "^2.3.2",
         "rfs": "^10.0.0",
-        "sass": "^1.70.0",
+        "sass": "^1.79.3",
         "stylelint": "^13.13.1",
         "stylelint-config-prettier": "^8.0.2",
         "stylelint-config-standard": "^22.0.0",
