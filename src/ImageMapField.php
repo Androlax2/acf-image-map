@@ -122,11 +122,7 @@ class ImageMapField extends \acf_field
             'ui' => 1,
             'required' => true,
             'default_value' => $this->defaultShape->getLabel(),
-            'choices' => collect($this->shapes)
-                ->mapWithKeys(function (ShapeContract $shape) {
-                    return [$shape->getName() => $shape->getLabel()];
-                })
-                ->toArray(),
+            'choices' => $this->choices(),
         ]);
 
         // Generate fields for each shape, depending on what the user selected as a shape.
@@ -165,9 +161,7 @@ class ImageMapField extends \acf_field
      */
     protected function findShape(string $shape): ShapeContract
     {
-        return collect($this->shapes)->first(function (ShapeContract $item, $key) use ($shape) {
-            return $key === $shape;
-        });
+        return $this->shapes[$shape] ?? $this->getDefaultShape();
     }
 
     /**
@@ -220,5 +214,26 @@ class ImageMapField extends \acf_field
     protected function asset(string $path): string
     {
         return "{$this->uri}/{$path}";
+    }
+
+    /**
+     * @return array<string, string>
+     */
+    protected function choices(): array
+    {
+        $choices = array_combine(
+            array_map(function (ShapeContract $shape) {
+                return $shape->getName();
+            }, $this->shapes),
+            array_map(function (ShapeContract $shape) {
+                return $shape->getLabel();
+            }, $this->shapes)
+        );
+
+        if (!$choices) {
+            $choices = [];
+        }
+
+        return $choices;
     }
 }
