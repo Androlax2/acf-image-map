@@ -9,6 +9,8 @@ jobs:
   release:
     name: Publish release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # upload the zip to the GitHub release
 
     steps:
       - name: Checkout
