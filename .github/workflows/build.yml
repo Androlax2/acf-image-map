@@ -10,8 +10,7 @@ jobs:
     if: ${{ github.actor != 'dependabot[bot]' }}
 
     permissions:
-      # Give the default GITHUB_TOKEN write permission to commit and push the changed files back to the repository.
-      contents: write
+      contents: read
 
     runs-on: ubuntu-latest
     steps:
@@ -28,8 +27,3 @@ jobs:
 
       - name: Build
         run: yarn build:production
-
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Build production assets
